@@ -1,0 +1,27 @@
+INTRODUCTION
+============
+This script was made to be a lightweight mobile and tablet browser detection and re-direction. It includes more modern browser user agent detection and also includes built-in debugging. This script is not complete/perfect as it's an ongoing process to test on all devices. Feel free to help out by submitting issues or commits to github!
+
+USAGE
+=====
+Include either javascript file in your header. Example:
+
+<script type="text/javascript" src="mobile-redirect.min.js"></script>
+
+Then execute the function on document ready. Syntac:
+
+$(document).ready(function(){
+	mobile_detect(mobile_true_false,tablet_true_false,"mobile_url","tablet_url",debug_true_false);
+});
+
+Example: You want to redirect mobile browsers, but not tablets with debugging off:
+
+$(document).ready(function(){
+	mobile_detect(true,false,"http://m.example.com","",false);
+});
+
+With de-bugging on, an alert will pop on page load with current user agent and if the script detected a mobile or tablet browser.
+
+GITHUB
+======
+Feel free to join on github to help out with issues and adding more user agents. Before submitting an issue, please turn on de-bugging and include the exact information.  
